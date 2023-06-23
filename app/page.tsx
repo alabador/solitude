@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <WideContentBlock text={Copy.banner}/>
+      <WideContentBlock text={Copy.banner} title={"Welcome to the Guild!"}/>
     </main>
   );
 }
