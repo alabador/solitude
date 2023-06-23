@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import NavMobileMenu from "./NavMobileMenu";
+import { unicaOne } from "@/styles/fonts";
 
 export default function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="navbar bg-base-100">
+    <header className={`${unicaOne.className} navbar bg-base-100`}>
       <div className="flex-1">
         <a className="btn btn-ghost normal-case text-xl">Solitude</a>
       </div>
