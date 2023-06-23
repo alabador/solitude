@@ -1,5 +1,5 @@
-import Hero from "@/components/Hero";
-import WideContentBlock from "@/components/WideContentBlock";
+import Hero from "@/app/components/Hero";
+import WideContentBlock from "@/app/components/WideContentBlock";
 import Copy from "@/data/websiteCopy.json";
 
 export default function Home() {
