@@ -19,15 +19,15 @@ import Cooking from '@/public/icons/marshmallows.svg'
 export default function ProfessionSection() {
   return (
     <section>
-        <h3 className={`${albertSans.className} text-center pb-12 text-xl font-medium`}>Gathering Professions</h3>
-        <section className='p-12 pt-0 md:p-24 md:pt-0 grid grid-cols-2 lg:grid-cols-4 gap-4'>
+        <h3 className={`${albertSans.className} text-center text-xl font-medium`}>Gathering Professions</h3>
+        <section className='p-16 md:p-24 pt-0 grid grid-cols-2 lg:grid-cols-4 gap-6'>
             <ProfessionCard title='Mining' image={Mining}/>
             <ProfessionCard title='Woodcutting' image={Chop}/>
             <ProfessionCard title='Farming'image={Farm}/>
             <ProfessionCard title='Fishing'image={Fish}/>
         </section>
-        <h3 className={`${albertSans.className} text-center pb-12 text-xl font-medium`}>Crafting Professions</h3>
-        <section className='p-12 pt-0 md:p-24 md:pt-0 grid grid-cols-2 lg:grid-cols-4 gap-4'>
+        <h3 className={`${albertSans.className} text-center text-xl font-medium`}>Crafting Professions</h3>
+        <section className='p-16 md:p-24 pt-0 grid grid-cols-2 lg:grid-cols-4 gap-6'>
             <ProfessionCard title='Armouring' image={Armouring}/>
             <ProfessionCard title='Tailoring' image={Tailoring}/>
             <ProfessionCard title='Weaponsmithing' image={Weaponsmithing}/>
