@@ -5,7 +5,7 @@ import Map from '@/public/images/mapwynn.png'
 
 export default function AboutSection() {
   return (
-    <section className="p-8 bg-secondary flex flex-col lg:flex-row items-center gap-8">
+    <section className="p-12 md:p-24 bg-secondary flex flex-col lg:flex-row items-center gap-12">
       <div className="flex flex-col justify-between">
         <SixtyForty 
         title="What is Solitude?"
