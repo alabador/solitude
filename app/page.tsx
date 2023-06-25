@@ -1,5 +1,5 @@
 import Hero from "@/app/components/Hero";
-import WideContentBlock from "@/app/components/WideContentBlock";
+import WideContentBlock from "@/components/WideContentBlock";
 import Copy from "@/data/websiteCopy.json";
 import AboutSection from "./components/AboutSection";
 import ProfessionSection from "./components/ProfessionSection";

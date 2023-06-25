@@ -2,6 +2,7 @@
 import { useState } from "react";
 import NavMobileMenu from "./NavMobileMenu";
 import { unicaOne } from "@/styles/fonts";
+import Link from "next/link";
 
 export default function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
@@ -17,7 +18,10 @@ export default function Navbar() {
   return (
     <header className={`${unicaOne.className} navbar bg-base-100`}>
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Solitude</a>
+        <Link 
+        className="btn btn-ghost normal-case text-xl"
+        href="/"
+        >Solitude</Link>
       </div>
       <div className="flex-none">
         <button
@@ -43,13 +47,13 @@ export default function Navbar() {
         <nav>
           <ul className="menu menu-horizontal px-1 hidden md:inline-flex">
             <li>
-              <a>Guild Members</a>
+              <Link href="/members">Guild Members</Link>
             </li>
             <li>
-              <a>Guild Info/FAQ</a>
+              <Link href="/faq">Guild Info/FAQ</Link>
             </li>
             <li>
-              <a>Resources</a>
+              <Link href="/resources">Resources</Link>
             </li>
           </ul>
         </nav>
