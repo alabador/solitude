@@ -1,15 +1,17 @@
+import Link from "next/link";
+
 export default function NavMobileMenu() {
   return (
     <nav>
       <ul className="menu bg-base-200 w-56 rounded-box absolute top-full right-0.5">
         <li>
-          <a>Guild Members</a>
+          <Link href="/members">Guild Members</Link>
         </li>
         <li>
-          <a>Guild Info/FAQ</a>
+          <Link href="/faq">Guild Info/FAQ</Link>
         </li>
         <li>
-          <a>Resources</a>
+          <Link href="/resources">Resources</Link>
         </li>
       </ul>
     </nav>
