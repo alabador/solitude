@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        domains: ['visage.surgeplay.com'],
+    },
+}
 
 module.exports = nextConfig

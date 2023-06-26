@@ -14,15 +14,15 @@ async function getUserData(user:string) {
 export default async function MemberSection({data}:
     {data:Promise<{members:[]}>}) {
     const members = (await data).members;
-    // enter name of user, gets passed as promise
-    // const userData = getUserData();
+
     return (
-        <section className="p-8">
-            {members.map(({name, rank}:{name:string, rank:string}) => {
-                return (<h1>{name} {rank}</h1>);
+        <section className="p-8 grid grid-cols-1 gap-8">
+            {members.map(({name, rank, uuid}:{name:string, rank:string, uuid:string}) => {
+                return (
+                    <MemberCard name={name} rank={rank} uuid={uuid}/>
+                );
             })
             }
-            {/* <MemberCard userData={data}/> */}
         </section>
     )
 }
