@@ -32,10 +32,16 @@ export default async function MemberCard({ name, rank, uuid }: { name:string, ra
                     height={250}
                 />
             </figure>
-            <div className="card-body">
-                <h2 className="card-title">{name}</h2>
-                <h3>{rank}</h3>
-                <p>Click the button to listen on Spotiwhy app.</p>
+            <div className="card-body justify-between">
+                <div>
+                    <h2 className="card-title">{name}</h2>
+                    <h3>{rank}</h3>
+                </div>
+                <a 
+                    className="btn btn-primary"
+                    href={`https://wynncraft.com/stats/player/${name}`}
+                    target="_blank"
+                >More Info</a>
             </div>
         </div>
     );
