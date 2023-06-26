@@ -11,13 +11,18 @@ async function getUserData(user:string) {
     return res.json();
   }
 
-export default function MemberSection({data}:
-    {data:Promise<{}>}) {
+export default async function MemberSection({data}:
+    {data:Promise<{members:[]}>}) {
+    const members = (await data).members;
     // enter name of user, gets passed as promise
     // const userData = getUserData();
     return (
         <section className="p-8">
-            <MemberCard userData={data}/>
+            {members.map(({name, rank}:{name:string, rank:string}) => {
+                return (<h1>{name} {rank}</h1>);
+            })
+            }
+            {/* <MemberCard userData={data}/> */}
         </section>
     )
 }
