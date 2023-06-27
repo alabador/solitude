@@ -1,16 +1,39 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import NavMobileMenu from "./NavMobileMenu";
 import { unicaOne } from "@/styles/fonts";
 import Link from "next/link";
 
 export default function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
-  
+  const navRef = useRef<HTMLUListElement>(null);
 
   const handleClick = () => {
     setToggleNav((prev) => !prev)
   }
+
+  useEffect(() => {
+    if (toggleNav) {
+      setTimeout(() => {
+        navRef.current?.focus();
+      }, 200)
+    }
+    
+    const handler = (e:any) => {
+      if(
+        toggleNav &&
+        navRef.current &&
+        !navRef.current.contains(e.target)
+      ) {
+        setToggleNav(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handler);
+    return () => {
+      document.removeEventListener('mousedown', handler);
+    }
+  }, [toggleNav])
 
   return (
     <header className={`${unicaOne.className} navbar bg-base-100`}>
@@ -38,7 +61,7 @@ export default function Navbar() {
               d="M4 6h16M4 12h16M4 18h16"
             ></path>
           </svg>
-          {toggleNav ? <NavMobileMenu /> : null}
+          {toggleNav ? <NavMobileMenu ref={navRef}/> : null}
         </button>
         <nav>
           <ul className="menu menu-horizontal px-1 hidden md:inline-flex">

@@ -1,10 +1,12 @@
 import Link from "next/link";
 
+import { forwardRef } from 'react'
 
-export default function NavMobileMenu() {
+
+const NavMobileMenu = forwardRef<HTMLUListElement>((props, ref) => {
   return (
-    <nav>
-      <ul className="menu bg-base-200 w-56 rounded-box absolute top-full right-0.5">
+    <nav >
+      <ul ref={ref} className="menu bg-base-200 w-56 rounded-box absolute top-full right-0.5">
         <li>
           <Link href="/members">Guild Members</Link>
         </li>
@@ -17,4 +19,6 @@ export default function NavMobileMenu() {
       </ul>
     </nav>
   );
-};
+});
+
+export default NavMobileMenu
