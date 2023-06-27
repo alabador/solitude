@@ -2,7 +2,9 @@ import Image from "next/image";
 
 async function getUserData(user:string) {
     const userDataUrl = `https://api.wynncraft.com/v2/player/${user}/stats`
-    const res = await fetch(userDataUrl);
+    const res = await fetch(userDataUrl,
+    {cache:'no-store'}    
+    );
   
     if(!res.ok) {
       throw new Error('Failed to fetch data');

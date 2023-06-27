@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export default function NavMobileMenu() {
   return (
     <nav>
@@ -16,4 +17,4 @@ export default function NavMobileMenu() {
       </ul>
     </nav>
   );
-}
+};

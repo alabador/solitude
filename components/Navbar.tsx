@@ -6,14 +6,11 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [toggleNav, setToggleNav] = useState(false);
+  
 
-  const handleNavFocus = () => {
-    setToggleNav(true);
-  };
-
-  const handleNavLeave = () => {
-    setToggleNav(false);
-  };
+  const handleClick = () => {
+    setToggleNav((prev) => !prev)
+  }
 
   return (
     <header className={`${unicaOne.className} navbar bg-base-100`}>
@@ -26,8 +23,7 @@ export default function Navbar() {
       <div className="flex-none">
         <button
           className="btn btn-square btn-ghost md:hidden relative"
-          onFocus={handleNavFocus}
-          onBlur={handleNavLeave}
+          onClick={handleClick}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
