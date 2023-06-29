@@ -37,7 +37,7 @@ export default function Navbar() {
   }, [toggleNav])
 
   return (
-    <header className={`${unicaOne.className} navbar bg-base-100`}>
+    <header className={`${unicaOne.className} navbar bg-base-100 text-black`}>
       <div className="flex-1">
         <Link 
         className="btn btn-ghost normal-case text-xl"
