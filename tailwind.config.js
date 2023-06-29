@@ -16,7 +16,8 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: ["bumblebee"]
+    themes: ["bumblebee"],
+    darkTheme: "bumblebee"
   },
   plugins: [require("daisyui")],
 }
