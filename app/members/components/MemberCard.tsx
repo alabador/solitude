@@ -29,7 +29,7 @@ export default async function MemberCard({ name, rank, uuid }: { name:string, ra
             <figure className="p-4">
                 <Image 
                     src={avatarImageUrl} 
-                    alt="Album"
+                    alt="Avatar"
                     width={150} 
                     height={250}
                 />

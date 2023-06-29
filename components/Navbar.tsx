@@ -30,6 +30,7 @@ export default function Navbar() {
     }
 
     document.addEventListener('mousedown', handler);
+    
     return () => {
       document.removeEventListener('mousedown', handler);
     }
@@ -45,7 +46,7 @@ export default function Navbar() {
       </div>
       <div className="flex-none">
         <button
-          className="btn btn-square btn-ghost md:hidden relative"
+          className={`${toggleNav && 'h-0 w-0'} btn btn-square btn-ghost md:hidden relative`}
           onClick={handleClick}
         >
           <svg
