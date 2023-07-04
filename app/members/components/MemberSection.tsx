@@ -1,4 +1,5 @@
 import MemberCard from "./MemberCard";
+import { unicaOne } from "@/styles/fonts";
 
 interface memberProps {
     name: string,
@@ -21,13 +22,29 @@ export default async function MemberSection({data}:
 
 
     return (
-        <section className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {members.map(({name, rank, uuid}:{name:string, rank:string, uuid:string}) => {
-                return (
-                    <MemberCard name={name} rank={rank} uuid={uuid}/>
-                );
-            })
-            }
+        <section className="p-8">
+            <section className="py-8">
+                <h3 className={`${unicaOne.className} text-center pb-8 text-xl`}>Solitude High Command</h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {highRanks.map(({name, rank, uuid}:{name:string, rank:string, uuid:string}) => {
+                        return (
+                            <MemberCard name={name} rank={rank} uuid={uuid}/>
+                        );
+                        })
+                    }
+                </div>
+            </section>
+            <section className="py-8">
+                <h3 className={`${unicaOne.className} text-center pb-8 text-xl`}>Citizens of Solitude</h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {standardMembers.map(({name, rank, uuid}:{name:string, rank:string, uuid:string}) => {
+                        return (
+                            <MemberCard name={name} rank={rank} uuid={uuid}/>
+                        );
+                        })
+                    }
+                </div>
+            </section>
         </section>
     )
 }
